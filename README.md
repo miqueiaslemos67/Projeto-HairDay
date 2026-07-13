@@ -1,22 +1,22 @@
 # Projeto Hair Day
 
-Aplicacao web de agendamento para salao de beleza desenvolvida em aula com HTML, CSS e JavaScript modular.
+Aplicação web de agendamento para salão de beleza, desenvolvida em aula com HTML, CSS e JavaScript modular.
 
-O projeto foi mantido com foco didatico, por isso o codigo contem comentarios explicativos e ha arquivos `.md` com observacoes sobre a estrutura, as correcoes aplicadas e as regras de negocio estudadas durante o desenvolvimento.
+O projeto foi mantido com foco didático. Por isso, o código contém comentários explicativos e arquivos `.md` com observações sobre a estrutura, as correções aplicadas e as regras de negócio estudadas durante o desenvolvimento.
 
 ## Funcionalidades
 
-- visualizar agendamentos do dia separados por periodo;
-- criar novos agendamentos a partir da data escolhida;
-- bloquear horarios passados e horarios ja ocupados;
-- listar proximos agendamentos em bloco separado;
-- cancelar agendamentos pela interface.
+- Visualizar os agendamentos do dia, separados por período;
+- Criar novos agendamentos a partir da data escolhida;
+- Bloquear horários passados e horários já ocupados;
+- Listar os próximos agendamentos em uma seção separada;
+- Cancelar agendamentos pela interface.
 
 ## Tecnologias
 
 - HTML
 - CSS
-- JavaScript modular
+- JavaScript (ES Modules)
 - Webpack
 - Babel
 - Day.js
@@ -24,7 +24,7 @@ O projeto foi mantido com foco didatico, por isso o codigo contem comentarios ex
 
 ## Como executar
 
-### 1. Instale as dependencias
+### 1. Instale as dependências
 
 ```bash
 npm install
@@ -36,48 +36,48 @@ npm install
 npm run server
 ```
 
-### 3. Em outro terminal, rode o projeto
+### 3. Em outro terminal, execute o projeto
 
 ```bash
 npm run dev
 ```
 
-Aplicacao: `http://localhost:3000`
+Aplicação: `http://localhost:3000`
 
 API fake: `http://localhost:3333/schedules`
 
 ## Scripts
 
-- `npm run dev`: sobe o servidor de desenvolvimento com Webpack
-- `npm run build`: gera o bundle em `dist/`
-- `npm run server`: inicia o `json-server` usando `server.json`
+- `npm run dev`: inicia o servidor de desenvolvimento com Webpack.
+- `npm run build`: gera o bundle na pasta `dist/`.
+- `npm run server`: inicia o `json-server` utilizando o arquivo `server.json`.
 
 ## Estrutura principal
 
 ```text
 .
-|- index.html
-|- server.json
-|- src/
-|  |- assets/
-|  |- libs/
-|  |- modules/
-|  |- services/
-|  |- styles/
-|  `- utils/
-`- docs/
+├── index.html
+├── server.json
+├── src/
+│   ├── assets/
+│   ├── libs/
+│   ├── modules/
+│   ├── services/
+│   ├── styles/
+│   └── utils/
+└── docs/
 ```
 
-## Documentacao
+## Documentação
 
-- `docs/README.md`: indice dos materiais de apoio
-- `docs/documentacao-projeto.md`: visao geral da arquitetura e das pastas
-- `docs/proximos-agendamentos.md`: explicacao da separacao entre agenda do dia e proximos atendimentos
-- `docs/form/ajustes-agendamento.md`: ajustes realizados no fluxo de agendamento
-- `docs/form/correcao-agendamento.md`: validacao para evitar duplicidade no mesmo horario
+- `docs/README.md`: índice dos materiais de apoio.
+- `docs/documentacao-projeto.md`: visão geral da arquitetura e da organização das pastas.
+- `docs/proximos-agendamentos.md`: explicação sobre a separação entre a agenda do dia e os próximos atendimentos.
+- `docs/form/ajustes-agendamento.md`: ajustes realizados no fluxo de agendamento.
+- `docs/form/correcao-agendamento.md`: validação para evitar agendamentos duplicados no mesmo horário.
 
-## Observacoes
+## Observações
 
-- este repositorio foi desenvolvido em aula;
-- os comentarios no codigo foram preservados com objetivo de estudo e consulta;
-- os arquivos `.md` servem como apoio para entendimento da implementacao e das correcoes feitas ao longo do projeto.
+- Este repositório foi desenvolvido durante as aulas.
+- Os comentários no código foram preservados com o objetivo de estudo e consulta.
+- Os arquivos `.md` servem como material de apoio para facilitar o entendimento da implementação e das correções realizadas ao longo do projeto.
