@@ -49,6 +49,10 @@ module.exports = {
           // O caminho de destino deve ser relativo ao diretório de saída
           to: path.resolve(__dirname, "dist", "src", "assets"),
         },
+        {
+          from: path.resolve(__dirname, "server.json"),
+          to: path.resolve(__dirname, "dist", "server.json"),
+        },
       ],
     }),
   ],
