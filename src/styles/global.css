@@ -1,0 +1,145 @@
+:root {
+  --yellow-light: #dbc170;
+  --yellow: #b8952e;
+  --yellow-dark: #846f2e;
+
+  --gray-100: #f5f4f5;
+  --gray-200: #b2afb6;
+  --gray-300: #98959d;
+  --gray-400: #7a767f;
+  --gray-500: #3e3c41;
+  --gray-600: #2e2c30;
+  --gray-700: #232225;
+  --gray-800: #19181b;
+  --gray-900: #050505;
+  --background-primary: #14151d;
+  --background-secondary: #1e1c21;
+  --surface-primary: #23242c;
+  --surface-secondary: #1b1c23;
+  --surface-tertiary: #2a2b33;
+  --border-color: #2e2c30;
+
+  --font-family-base: "Catamaran", sans-serif;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --border-default: 1px solid var(--border-color);
+  --focus-ring: 0 0 0 0.2rem rgba(184, 149, 46, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--font-family-base);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-primary);
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.03), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.015) 0,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+  color: var(--gray-100);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(100%, 73.5rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+
+  display: grid;
+  grid-template-columns: 18.25rem minmax(0, 1fr);
+  grid-template-areas: "sidebar schedule";
+  column-gap: 4.25rem;
+  align-items: start;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: relative;
+  padding-top: 0.75rem;
+}
+
+.logo {
+  width: 5.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  appearance: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--gray-900);
+}
+
+@media (max-width: 1023px) {
+  .container {
+    width: min(100%, 42rem);
+    min-height: auto;
+    padding: 1.5rem 1rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "schedule";
+    row-gap: 1.5rem;
+  }
+
+  .sidebar {
+    padding-top: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .logo {
+    width: 5.5rem;
+  }
+}
